@@ -15,6 +15,7 @@ class Blurb(models.Model):
 	book = models.ForeignKey('Book')
 	post = models.ForeignKey('Post')
 	reading = models.BooleanField(default=False)
+	current_page = models.IntegerField(null=True)
 
 	def __str__(self): 
 		return (self.text)
@@ -23,6 +24,7 @@ class Book(models.Model):
 	title = models.CharField(max_length=300)
 	author = models.ForeignKey('Author')
 	general_notes=models.TextField(null=True, blank=True)
+	total_pages=models.IntegerField(null=True)cd 
 
 	def __str__(self): 
 		return self.title
