@@ -24,7 +24,7 @@ class Book(models.Model):
 	title = models.CharField(max_length=300)
 	author = models.ForeignKey('Author')
 	general_notes=models.TextField(null=True, blank=True)
-	total_pages=models.IntegerField(null=True)cd 
+	total_pages=models.IntegerField(null=True)
 
 	def __str__(self): 
 		return self.title
